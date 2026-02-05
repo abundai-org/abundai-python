@@ -1,0 +1,268 @@
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+from __future__ import annotations
+
+from typing_extensions import Literal
+
+import httpx
+
+from ...._types import Body, Omit, Query, Headers, NotGiven, omit, not_given
+from ...._utils import maybe_transform, async_maybe_transform
+from ...._compat import cached_property
+from ...._resource import SyncAPIResource, AsyncAPIResource
+from ...._response import (
+    to_raw_response_wrapper,
+    to_streamed_response_wrapper,
+    async_to_raw_response_wrapper,
+    async_to_streamed_response_wrapper,
+)
+from ...._base_client import make_request_options
+from ....types.api.v1 import gallery_list_params
+from ....types.api.v1.gallery_list_response import GalleryListResponse
+from ....types.api.v1.gallery_retrieve_response import GalleryRetrieveResponse
+
+__all__ = ["GalleriesResource", "AsyncGalleriesResource"]
+
+
+class GalleriesResource(SyncAPIResource):
+    @cached_property
+    def with_raw_response(self) -> GalleriesResourceWithRawResponse:
+        """
+        This property can be used as a prefix for any HTTP method call to return
+        the raw response object instead of the parsed content.
+
+        For more information, see https://www.github.com/stainless-sdks/abundai-python#accessing-raw-response-data-eg-headers
+        """
+        return GalleriesResourceWithRawResponse(self)
+
+    @cached_property
+    def with_streaming_response(self) -> GalleriesResourceWithStreamingResponse:
+        """
+        An alternative to `.with_raw_response` that doesn't eagerly read the response body.
+
+        For more information, see https://www.github.com/stainless-sdks/abundai-python#with_streaming_response
+        """
+        return GalleriesResourceWithStreamingResponse(self)
+
+    def retrieve(
+        self,
+        id: str,
+        *,
+        # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
+        # The extra values given here take precedence over values defined on the client or passed to this method.
+        extra_headers: Headers | None = None,
+        extra_query: Query | None = None,
+        extra_body: Body | None = None,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
+    ) -> GalleryRetrieveResponse:
+        """
+        Get a single gallery with all images and AI generation metadata.
+
+        Args:
+          extra_headers: Send extra headers
+
+          extra_query: Add additional query parameters to the request
+
+          extra_body: Add additional JSON properties to the request
+
+          timeout: Override the client-level default timeout for this request, in seconds
+        """
+        if not id:
+            raise ValueError(f"Expected a non-empty value for `id` but received {id!r}")
+        return self._get(
+            f"/api/v1/galleries/{id}",
+            options=make_request_options(
+                extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
+            ),
+            cast_to=GalleryRetrieveResponse,
+        )
+
+    def list(
+        self,
+        *,
+        limit: str | Omit = omit,
+        page: str | Omit = omit,
+        sort: Literal["new", "hot", "top"] | Omit = omit,
+        # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
+        # The extra values given here take precedence over values defined on the client or passed to this method.
+        extra_headers: Headers | None = None,
+        extra_query: Query | None = None,
+        extra_body: Body | None = None,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
+    ) -> GalleryListResponse:
+        """
+        Get paginated list of AI art galleries with preview images.
+
+        Args:
+          extra_headers: Send extra headers
+
+          extra_query: Add additional query parameters to the request
+
+          extra_body: Add additional JSON properties to the request
+
+          timeout: Override the client-level default timeout for this request, in seconds
+        """
+        return self._get(
+            "/api/v1/galleries",
+            options=make_request_options(
+                extra_headers=extra_headers,
+                extra_query=extra_query,
+                extra_body=extra_body,
+                timeout=timeout,
+                query=maybe_transform(
+                    {
+                        "limit": limit,
+                        "page": page,
+                        "sort": sort,
+                    },
+                    gallery_list_params.GalleryListParams,
+                ),
+            ),
+            cast_to=GalleryListResponse,
+        )
+
+
+class AsyncGalleriesResource(AsyncAPIResource):
+    @cached_property
+    def with_raw_response(self) -> AsyncGalleriesResourceWithRawResponse:
+        """
+        This property can be used as a prefix for any HTTP method call to return
+        the raw response object instead of the parsed content.
+
+        For more information, see https://www.github.com/stainless-sdks/abundai-python#accessing-raw-response-data-eg-headers
+        """
+        return AsyncGalleriesResourceWithRawResponse(self)
+
+    @cached_property
+    def with_streaming_response(self) -> AsyncGalleriesResourceWithStreamingResponse:
+        """
+        An alternative to `.with_raw_response` that doesn't eagerly read the response body.
+
+        For more information, see https://www.github.com/stainless-sdks/abundai-python#with_streaming_response
+        """
+        return AsyncGalleriesResourceWithStreamingResponse(self)
+
+    async def retrieve(
+        self,
+        id: str,
+        *,
+        # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
+        # The extra values given here take precedence over values defined on the client or passed to this method.
+        extra_headers: Headers | None = None,
+        extra_query: Query | None = None,
+        extra_body: Body | None = None,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
+    ) -> GalleryRetrieveResponse:
+        """
+        Get a single gallery with all images and AI generation metadata.
+
+        Args:
+          extra_headers: Send extra headers
+
+          extra_query: Add additional query parameters to the request
+
+          extra_body: Add additional JSON properties to the request
+
+          timeout: Override the client-level default timeout for this request, in seconds
+        """
+        if not id:
+            raise ValueError(f"Expected a non-empty value for `id` but received {id!r}")
+        return await self._get(
+            f"/api/v1/galleries/{id}",
+            options=make_request_options(
+                extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
+            ),
+            cast_to=GalleryRetrieveResponse,
+        )
+
+    async def list(
+        self,
+        *,
+        limit: str | Omit = omit,
+        page: str | Omit = omit,
+        sort: Literal["new", "hot", "top"] | Omit = omit,
+        # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
+        # The extra values given here take precedence over values defined on the client or passed to this method.
+        extra_headers: Headers | None = None,
+        extra_query: Query | None = None,
+        extra_body: Body | None = None,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
+    ) -> GalleryListResponse:
+        """
+        Get paginated list of AI art galleries with preview images.
+
+        Args:
+          extra_headers: Send extra headers
+
+          extra_query: Add additional query parameters to the request
+
+          extra_body: Add additional JSON properties to the request
+
+          timeout: Override the client-level default timeout for this request, in seconds
+        """
+        return await self._get(
+            "/api/v1/galleries",
+            options=make_request_options(
+                extra_headers=extra_headers,
+                extra_query=extra_query,
+                extra_body=extra_body,
+                timeout=timeout,
+                query=await async_maybe_transform(
+                    {
+                        "limit": limit,
+                        "page": page,
+                        "sort": sort,
+                    },
+                    gallery_list_params.GalleryListParams,
+                ),
+            ),
+            cast_to=GalleryListResponse,
+        )
+
+
+class GalleriesResourceWithRawResponse:
+    def __init__(self, galleries: GalleriesResource) -> None:
+        self._galleries = galleries
+
+        self.retrieve = to_raw_response_wrapper(
+            galleries.retrieve,
+        )
+        self.list = to_raw_response_wrapper(
+            galleries.list,
+        )
+
+
+class AsyncGalleriesResourceWithRawResponse:
+    def __init__(self, galleries: AsyncGalleriesResource) -> None:
+        self._galleries = galleries
+
+        self.retrieve = async_to_raw_response_wrapper(
+            galleries.retrieve,
+        )
+        self.list = async_to_raw_response_wrapper(
+            galleries.list,
+        )
+
+
+class GalleriesResourceWithStreamingResponse:
+    def __init__(self, galleries: GalleriesResource) -> None:
+        self._galleries = galleries
+
+        self.retrieve = to_streamed_response_wrapper(
+            galleries.retrieve,
+        )
+        self.list = to_streamed_response_wrapper(
+            galleries.list,
+        )
+
+
+class AsyncGalleriesResourceWithStreamingResponse:
+    def __init__(self, galleries: AsyncGalleriesResource) -> None:
+        self._galleries = galleries
+
+        self.retrieve = async_to_streamed_response_wrapper(
+            galleries.retrieve,
+        )
+        self.list = async_to_streamed_response_wrapper(
+            galleries.list,
+        )
