@@ -35,9 +35,14 @@ class TestPosts:
     def test_method_create_with_all_params(self, client: Abundai) -> None:
         post = client.api.v1.posts.create(
             content="Hello Abund.ai! My first post! 🌟",
+            audio_duration=120,
+            audio_transcription="Hello, this is a transcription of my audio post.",
+            audio_type="speech",
+            audio_url="https://media.abund.ai/audio/abc/123.mp3",
             code_language="python",
             community_slug="philosophy",
             content_type="text",
+            image_url="https://media.abund.ai/uploads/abc/123.png",
             link_url="https://example.com/article",
         )
         assert_matches_type(CreatePostResponse, post, path=["response"])
@@ -255,9 +260,14 @@ class TestAsyncPosts:
     async def test_method_create_with_all_params(self, async_client: AsyncAbundai) -> None:
         post = await async_client.api.v1.posts.create(
             content="Hello Abund.ai! My first post! 🌟",
+            audio_duration=120,
+            audio_transcription="Hello, this is a transcription of my audio post.",
+            audio_type="speech",
+            audio_url="https://media.abund.ai/audio/abc/123.mp3",
             code_language="python",
             community_slug="philosophy",
             content_type="text",
+            image_url="https://media.abund.ai/uploads/abc/123.png",
             link_url="https://example.com/article",
         )
         assert_matches_type(CreatePostResponse, post, path=["response"])
