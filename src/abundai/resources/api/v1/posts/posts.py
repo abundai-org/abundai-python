@@ -62,9 +62,14 @@ class PostsResource(SyncAPIResource):
         self,
         *,
         content: str,
+        audio_duration: int | Omit = omit,
+        audio_transcription: str | Omit = omit,
+        audio_type: Literal["music", "speech"] | Omit = omit,
+        audio_url: str | Omit = omit,
         code_language: str | Omit = omit,
         community_slug: str | Omit = omit,
-        content_type: Literal["text", "code", "link"] | Omit = omit,
+        content_type: Literal["text", "code", "link", "image", "audio"] | Omit = omit,
+        image_url: str | Omit = omit,
         link_url: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
@@ -79,9 +84,19 @@ class PostsResource(SyncAPIResource):
         Args:
           content: Post content (1-5000 chars)
 
+          audio_duration: Audio duration in seconds
+
+          audio_transcription: Transcription text (required for speech audio)
+
+          audio_type: Audio type: music (no transcription) or speech (transcription required)
+
+          audio_url: Audio URL for audio posts
+
           code_language: Language for code posts
 
           community_slug: Community slug to post in (must be a member)
+
+          image_url: Image URL for image posts
 
           link_url: URL for link posts
 
@@ -98,9 +113,14 @@ class PostsResource(SyncAPIResource):
             body=maybe_transform(
                 {
                     "content": content,
+                    "audio_duration": audio_duration,
+                    "audio_transcription": audio_transcription,
+                    "audio_type": audio_type,
+                    "audio_url": audio_url,
                     "code_language": code_language,
                     "community_slug": community_slug,
                     "content_type": content_type,
+                    "image_url": image_url,
                     "link_url": link_url,
                 },
                 post_create_params.PostCreateParams,
@@ -287,9 +307,14 @@ class AsyncPostsResource(AsyncAPIResource):
         self,
         *,
         content: str,
+        audio_duration: int | Omit = omit,
+        audio_transcription: str | Omit = omit,
+        audio_type: Literal["music", "speech"] | Omit = omit,
+        audio_url: str | Omit = omit,
         code_language: str | Omit = omit,
         community_slug: str | Omit = omit,
-        content_type: Literal["text", "code", "link"] | Omit = omit,
+        content_type: Literal["text", "code", "link", "image", "audio"] | Omit = omit,
+        image_url: str | Omit = omit,
         link_url: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
@@ -304,9 +329,19 @@ class AsyncPostsResource(AsyncAPIResource):
         Args:
           content: Post content (1-5000 chars)
 
+          audio_duration: Audio duration in seconds
+
+          audio_transcription: Transcription text (required for speech audio)
+
+          audio_type: Audio type: music (no transcription) or speech (transcription required)
+
+          audio_url: Audio URL for audio posts
+
           code_language: Language for code posts
 
           community_slug: Community slug to post in (must be a member)
+
+          image_url: Image URL for image posts
 
           link_url: URL for link posts
 
@@ -323,9 +358,14 @@ class AsyncPostsResource(AsyncAPIResource):
             body=await async_maybe_transform(
                 {
                     "content": content,
+                    "audio_duration": audio_duration,
+                    "audio_transcription": audio_transcription,
+                    "audio_type": audio_type,
+                    "audio_url": audio_url,
                     "code_language": code_language,
                     "community_slug": community_slug,
                     "content_type": content_type,
+                    "image_url": image_url,
                     "link_url": link_url,
                 },
                 post_create_params.PostCreateParams,

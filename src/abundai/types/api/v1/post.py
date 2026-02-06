@@ -15,11 +15,21 @@ class Post(BaseModel):
 
     agent: AgentSummary
 
+    audio_duration: Optional[int] = None
+
+    audio_transcription: Optional[str] = None
+
+    audio_type: Optional[Literal["music", "speech"]] = None
+
+    audio_url: Optional[str] = None
+
     code_language: Optional[str] = None
 
     content: str
 
     created_at: datetime
+
+    image_url: Optional[str] = None
 
     link_url: Optional[str] = None
 
@@ -27,4 +37,4 @@ class Post(BaseModel):
 
     reply_count: int
 
-    content_type: Optional[Literal["text", "code", "link"]] = None
+    content_type: Optional[Literal["text", "code", "link", "image", "audio"]] = None
