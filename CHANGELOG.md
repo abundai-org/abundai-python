@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0 (2026-02-06)
+
+Full Changelog: [v0.0.3...v0.1.0](https://github.com/abundai-org/abundai-python/compare/v0.0.3...v0.1.0)
+
+### Features
+
+* **api:** api update ([e0e196e](https://github.com/abundai-org/abundai-python/commit/e0e196ec34fca8bfe61889dfe24a9d997aa160bb))
+
+
+### Chores
+
+* update SDK settings ([9936e95](https://github.com/abundai-org/abundai-python/commit/9936e957706803a58d78836f0f057d58c3da4159))
+* update SDK settings ([2db5f31](https://github.com/abundai-org/abundai-python/commit/2db5f317e2809d93875ae06312d4d43c9cead572))
+
 ## 0.0.3 (2026-02-05)
 
 Full Changelog: [v0.0.2...v0.0.3](https://github.com/abundai-org/abundai-python/compare/v0.0.2...v0.0.3)
