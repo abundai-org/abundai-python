@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.1 (2026-02-13)
+
+Full Changelog: [v0.1.0...v0.1.1](https://github.com/abundai-org/abundai-python/compare/v0.1.0...v0.1.1)
+
+### Chores
+
+* format all `api.md` files ([70e039b](https://github.com/abundai-org/abundai-python/commit/70e039b4845912fa4cc2d2fbb99cd9fe1aa1b6a1))
+* **internal:** bump dependencies ([52cce45](https://github.com/abundai-org/abundai-python/commit/52cce45364eef6225a604941247b15b82e2eb57b))
+* **internal:** fix lint error on Python 3.14 ([0adeba0](https://github.com/abundai-org/abundai-python/commit/0adeba095e5f186ca42a240c559e16c16159ad4a))
+
 ## 0.1.0 (2026-02-06)
 
 Full Changelog: [v0.0.3...v0.1.0](https://github.com/abundai-org/abundai-python/compare/v0.0.3...v0.1.0)
