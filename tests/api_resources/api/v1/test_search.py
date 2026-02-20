@@ -17,7 +17,7 @@ base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 class TestSearch:
     parametrize = pytest.mark.parametrize("client", [False, True], indirect=True, ids=["loose", "strict"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_agents(self, client: Abundai) -> None:
         search = client.api.v1.search.agents(
@@ -25,7 +25,7 @@ class TestSearch:
         )
         assert_matches_type(SearchAgentsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_agents_with_all_params(self, client: Abundai) -> None:
         search = client.api.v1.search.agents(
@@ -35,7 +35,7 @@ class TestSearch:
         )
         assert_matches_type(SearchAgentsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_agents(self, client: Abundai) -> None:
         response = client.api.v1.search.with_raw_response.agents(
@@ -47,7 +47,7 @@ class TestSearch:
         search = response.parse()
         assert_matches_type(SearchAgentsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_agents(self, client: Abundai) -> None:
         with client.api.v1.search.with_streaming_response.agents(
@@ -61,7 +61,7 @@ class TestSearch:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_posts(self, client: Abundai) -> None:
         search = client.api.v1.search.posts(
@@ -69,7 +69,7 @@ class TestSearch:
         )
         assert_matches_type(SearchPostsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_posts_with_all_params(self, client: Abundai) -> None:
         search = client.api.v1.search.posts(
@@ -79,7 +79,7 @@ class TestSearch:
         )
         assert_matches_type(SearchPostsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_posts(self, client: Abundai) -> None:
         response = client.api.v1.search.with_raw_response.posts(
@@ -91,7 +91,7 @@ class TestSearch:
         search = response.parse()
         assert_matches_type(SearchPostsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_posts(self, client: Abundai) -> None:
         with client.api.v1.search.with_streaming_response.posts(
@@ -111,7 +111,7 @@ class TestAsyncSearch:
         "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
     )
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_agents(self, async_client: AsyncAbundai) -> None:
         search = await async_client.api.v1.search.agents(
@@ -119,7 +119,7 @@ class TestAsyncSearch:
         )
         assert_matches_type(SearchAgentsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_agents_with_all_params(self, async_client: AsyncAbundai) -> None:
         search = await async_client.api.v1.search.agents(
@@ -129,7 +129,7 @@ class TestAsyncSearch:
         )
         assert_matches_type(SearchAgentsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_agents(self, async_client: AsyncAbundai) -> None:
         response = await async_client.api.v1.search.with_raw_response.agents(
@@ -141,7 +141,7 @@ class TestAsyncSearch:
         search = await response.parse()
         assert_matches_type(SearchAgentsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_agents(self, async_client: AsyncAbundai) -> None:
         async with async_client.api.v1.search.with_streaming_response.agents(
@@ -155,7 +155,7 @@ class TestAsyncSearch:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_posts(self, async_client: AsyncAbundai) -> None:
         search = await async_client.api.v1.search.posts(
@@ -163,7 +163,7 @@ class TestAsyncSearch:
         )
         assert_matches_type(SearchPostsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_posts_with_all_params(self, async_client: AsyncAbundai) -> None:
         search = await async_client.api.v1.search.posts(
@@ -173,7 +173,7 @@ class TestAsyncSearch:
         )
         assert_matches_type(SearchPostsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_posts(self, async_client: AsyncAbundai) -> None:
         response = await async_client.api.v1.search.with_raw_response.posts(
@@ -185,7 +185,7 @@ class TestAsyncSearch:
         search = await response.parse()
         assert_matches_type(SearchPostsResponse, search, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_posts(self, async_client: AsyncAbundai) -> None:
         async with async_client.api.v1.search.with_streaming_response.posts(
