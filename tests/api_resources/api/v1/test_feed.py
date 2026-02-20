@@ -17,13 +17,13 @@ base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 class TestFeed:
     parametrize = pytest.mark.parametrize("client", [False, True], indirect=True, ids=["loose", "strict"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_retrieve(self, client: Abundai) -> None:
         feed = client.api.v1.feed.retrieve()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_retrieve_with_all_params(self, client: Abundai) -> None:
         feed = client.api.v1.feed.retrieve(
@@ -33,7 +33,7 @@ class TestFeed:
         )
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_retrieve(self, client: Abundai) -> None:
         response = client.api.v1.feed.with_raw_response.retrieve()
@@ -43,7 +43,7 @@ class TestFeed:
         feed = response.parse()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_retrieve(self, client: Abundai) -> None:
         with client.api.v1.feed.with_streaming_response.retrieve() as response:
@@ -55,13 +55,13 @@ class TestFeed:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_global(self, client: Abundai) -> None:
         feed = client.api.v1.feed.global_()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_global_with_all_params(self, client: Abundai) -> None:
         feed = client.api.v1.feed.global_(
@@ -71,7 +71,7 @@ class TestFeed:
         )
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_global(self, client: Abundai) -> None:
         response = client.api.v1.feed.with_raw_response.global_()
@@ -81,7 +81,7 @@ class TestFeed:
         feed = response.parse()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_global(self, client: Abundai) -> None:
         with client.api.v1.feed.with_streaming_response.global_() as response:
@@ -93,13 +93,13 @@ class TestFeed:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_trending(self, client: Abundai) -> None:
         feed = client.api.v1.feed.trending()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_trending_with_all_params(self, client: Abundai) -> None:
         feed = client.api.v1.feed.trending(
@@ -108,7 +108,7 @@ class TestFeed:
         )
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_trending(self, client: Abundai) -> None:
         response = client.api.v1.feed.with_raw_response.trending()
@@ -118,7 +118,7 @@ class TestFeed:
         feed = response.parse()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_trending(self, client: Abundai) -> None:
         with client.api.v1.feed.with_streaming_response.trending() as response:
@@ -136,13 +136,13 @@ class TestAsyncFeed:
         "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
     )
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_retrieve(self, async_client: AsyncAbundai) -> None:
         feed = await async_client.api.v1.feed.retrieve()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_retrieve_with_all_params(self, async_client: AsyncAbundai) -> None:
         feed = await async_client.api.v1.feed.retrieve(
@@ -152,7 +152,7 @@ class TestAsyncFeed:
         )
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_retrieve(self, async_client: AsyncAbundai) -> None:
         response = await async_client.api.v1.feed.with_raw_response.retrieve()
@@ -162,7 +162,7 @@ class TestAsyncFeed:
         feed = await response.parse()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_retrieve(self, async_client: AsyncAbundai) -> None:
         async with async_client.api.v1.feed.with_streaming_response.retrieve() as response:
@@ -174,13 +174,13 @@ class TestAsyncFeed:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_global(self, async_client: AsyncAbundai) -> None:
         feed = await async_client.api.v1.feed.global_()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_global_with_all_params(self, async_client: AsyncAbundai) -> None:
         feed = await async_client.api.v1.feed.global_(
@@ -190,7 +190,7 @@ class TestAsyncFeed:
         )
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_global(self, async_client: AsyncAbundai) -> None:
         response = await async_client.api.v1.feed.with_raw_response.global_()
@@ -200,7 +200,7 @@ class TestAsyncFeed:
         feed = await response.parse()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_global(self, async_client: AsyncAbundai) -> None:
         async with async_client.api.v1.feed.with_streaming_response.global_() as response:
@@ -212,13 +212,13 @@ class TestAsyncFeed:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_trending(self, async_client: AsyncAbundai) -> None:
         feed = await async_client.api.v1.feed.trending()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_trending_with_all_params(self, async_client: AsyncAbundai) -> None:
         feed = await async_client.api.v1.feed.trending(
@@ -227,7 +227,7 @@ class TestAsyncFeed:
         )
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_trending(self, async_client: AsyncAbundai) -> None:
         response = await async_client.api.v1.feed.with_raw_response.trending()
@@ -237,7 +237,7 @@ class TestAsyncFeed:
         feed = await response.parse()
         assert_matches_type(FeedResponse, feed, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_trending(self, async_client: AsyncAbundai) -> None:
         async with async_client.api.v1.feed.with_streaming_response.trending() as response:

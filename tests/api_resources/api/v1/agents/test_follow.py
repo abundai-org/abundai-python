@@ -17,7 +17,7 @@ base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 class TestFollow:
     parametrize = pytest.mark.parametrize("client", [False, True], indirect=True, ids=["loose", "strict"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_start(self, client: Abundai) -> None:
         follow = client.api.v1.agents.follow.start(
@@ -25,7 +25,7 @@ class TestFollow:
         )
         assert_matches_type(SuccessResponse, follow, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_start(self, client: Abundai) -> None:
         response = client.api.v1.agents.follow.with_raw_response.start(
@@ -37,7 +37,7 @@ class TestFollow:
         follow = response.parse()
         assert_matches_type(SuccessResponse, follow, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_start(self, client: Abundai) -> None:
         with client.api.v1.agents.follow.with_streaming_response.start(
@@ -51,7 +51,7 @@ class TestFollow:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_path_params_start(self, client: Abundai) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `handle` but received ''"):
@@ -59,7 +59,7 @@ class TestFollow:
                 "",
             )
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_stop(self, client: Abundai) -> None:
         follow = client.api.v1.agents.follow.stop(
@@ -67,7 +67,7 @@ class TestFollow:
         )
         assert_matches_type(SuccessResponse, follow, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_stop(self, client: Abundai) -> None:
         response = client.api.v1.agents.follow.with_raw_response.stop(
@@ -79,7 +79,7 @@ class TestFollow:
         follow = response.parse()
         assert_matches_type(SuccessResponse, follow, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_stop(self, client: Abundai) -> None:
         with client.api.v1.agents.follow.with_streaming_response.stop(
@@ -93,7 +93,7 @@ class TestFollow:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_path_params_stop(self, client: Abundai) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `handle` but received ''"):
@@ -107,7 +107,7 @@ class TestAsyncFollow:
         "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
     )
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_start(self, async_client: AsyncAbundai) -> None:
         follow = await async_client.api.v1.agents.follow.start(
@@ -115,7 +115,7 @@ class TestAsyncFollow:
         )
         assert_matches_type(SuccessResponse, follow, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_start(self, async_client: AsyncAbundai) -> None:
         response = await async_client.api.v1.agents.follow.with_raw_response.start(
@@ -127,7 +127,7 @@ class TestAsyncFollow:
         follow = await response.parse()
         assert_matches_type(SuccessResponse, follow, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_start(self, async_client: AsyncAbundai) -> None:
         async with async_client.api.v1.agents.follow.with_streaming_response.start(
@@ -141,7 +141,7 @@ class TestAsyncFollow:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_path_params_start(self, async_client: AsyncAbundai) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `handle` but received ''"):
@@ -149,7 +149,7 @@ class TestAsyncFollow:
                 "",
             )
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_stop(self, async_client: AsyncAbundai) -> None:
         follow = await async_client.api.v1.agents.follow.stop(
@@ -157,7 +157,7 @@ class TestAsyncFollow:
         )
         assert_matches_type(SuccessResponse, follow, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_stop(self, async_client: AsyncAbundai) -> None:
         response = await async_client.api.v1.agents.follow.with_raw_response.stop(
@@ -169,7 +169,7 @@ class TestAsyncFollow:
         follow = await response.parse()
         assert_matches_type(SuccessResponse, follow, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_stop(self, async_client: AsyncAbundai) -> None:
         async with async_client.api.v1.agents.follow.with_streaming_response.stop(
@@ -183,7 +183,7 @@ class TestAsyncFollow:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_path_params_stop(self, async_client: AsyncAbundai) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `handle` but received ''"):
