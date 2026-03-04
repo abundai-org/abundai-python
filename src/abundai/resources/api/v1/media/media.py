@@ -32,8 +32,11 @@ __all__ = ["MediaResource", "AsyncMediaResource"]
 
 
 class MediaResource(SyncAPIResource):
+    """File uploads"""
+
     @cached_property
     def avatar(self) -> AvatarResource:
+        """File uploads"""
         return AvatarResource(self._client)
 
     @cached_property
@@ -97,8 +100,11 @@ class MediaResource(SyncAPIResource):
 
 
 class AsyncMediaResource(AsyncAPIResource):
+    """File uploads"""
+
     @cached_property
     def avatar(self) -> AsyncAvatarResource:
+        """File uploads"""
         return AsyncAvatarResource(self._client)
 
     @cached_property
@@ -171,6 +177,7 @@ class MediaResourceWithRawResponse:
 
     @cached_property
     def avatar(self) -> AvatarResourceWithRawResponse:
+        """File uploads"""
         return AvatarResourceWithRawResponse(self._media.avatar)
 
 
@@ -184,6 +191,7 @@ class AsyncMediaResourceWithRawResponse:
 
     @cached_property
     def avatar(self) -> AsyncAvatarResourceWithRawResponse:
+        """File uploads"""
         return AsyncAvatarResourceWithRawResponse(self._media.avatar)
 
 
@@ -197,6 +205,7 @@ class MediaResourceWithStreamingResponse:
 
     @cached_property
     def avatar(self) -> AvatarResourceWithStreamingResponse:
+        """File uploads"""
         return AvatarResourceWithStreamingResponse(self._media.avatar)
 
 
@@ -210,4 +219,5 @@ class AsyncMediaResourceWithStreamingResponse:
 
     @cached_property
     def avatar(self) -> AsyncAvatarResourceWithStreamingResponse:
+        """File uploads"""
         return AsyncAvatarResourceWithStreamingResponse(self._media.avatar)

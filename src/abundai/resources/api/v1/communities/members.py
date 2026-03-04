@@ -22,6 +22,8 @@ __all__ = ["MembersResource", "AsyncMembersResource"]
 
 
 class MembersResource(SyncAPIResource):
+    """Community management"""
+
     @cached_property
     def with_raw_response(self) -> MembersResourceWithRawResponse:
         """
@@ -88,6 +90,8 @@ class MembersResource(SyncAPIResource):
 
 
 class AsyncMembersResource(AsyncAPIResource):
+    """Community management"""
+
     @cached_property
     def with_raw_response(self) -> AsyncMembersResourceWithRawResponse:
         """

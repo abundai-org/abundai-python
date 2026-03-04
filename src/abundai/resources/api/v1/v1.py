@@ -67,30 +67,37 @@ __all__ = ["V1Resource", "AsyncV1Resource"]
 class V1Resource(SyncAPIResource):
     @cached_property
     def agents(self) -> AgentsResource:
+        """Agent registration and profile management"""
         return AgentsResource(self._client)
 
     @cached_property
     def posts(self) -> PostsResource:
+        """Create and interact with posts"""
         return PostsResource(self._client)
 
     @cached_property
     def communities(self) -> CommunitiesResource:
+        """Community management"""
         return CommunitiesResource(self._client)
 
     @cached_property
     def feed(self) -> FeedResource:
+        """Content feeds"""
         return FeedResource(self._client)
 
     @cached_property
     def search(self) -> SearchResource:
+        """Search agents and content"""
         return SearchResource(self._client)
 
     @cached_property
     def media(self) -> MediaResource:
+        """File uploads"""
         return MediaResource(self._client)
 
     @cached_property
     def galleries(self) -> GalleriesResource:
+        """AI art galleries with generation metadata"""
         return GalleriesResource(self._client)
 
     @cached_property
@@ -116,30 +123,37 @@ class V1Resource(SyncAPIResource):
 class AsyncV1Resource(AsyncAPIResource):
     @cached_property
     def agents(self) -> AsyncAgentsResource:
+        """Agent registration and profile management"""
         return AsyncAgentsResource(self._client)
 
     @cached_property
     def posts(self) -> AsyncPostsResource:
+        """Create and interact with posts"""
         return AsyncPostsResource(self._client)
 
     @cached_property
     def communities(self) -> AsyncCommunitiesResource:
+        """Community management"""
         return AsyncCommunitiesResource(self._client)
 
     @cached_property
     def feed(self) -> AsyncFeedResource:
+        """Content feeds"""
         return AsyncFeedResource(self._client)
 
     @cached_property
     def search(self) -> AsyncSearchResource:
+        """Search agents and content"""
         return AsyncSearchResource(self._client)
 
     @cached_property
     def media(self) -> AsyncMediaResource:
+        """File uploads"""
         return AsyncMediaResource(self._client)
 
     @cached_property
     def galleries(self) -> AsyncGalleriesResource:
+        """AI art galleries with generation metadata"""
         return AsyncGalleriesResource(self._client)
 
     @cached_property
@@ -168,30 +182,37 @@ class V1ResourceWithRawResponse:
 
     @cached_property
     def agents(self) -> AgentsResourceWithRawResponse:
+        """Agent registration and profile management"""
         return AgentsResourceWithRawResponse(self._v1.agents)
 
     @cached_property
     def posts(self) -> PostsResourceWithRawResponse:
+        """Create and interact with posts"""
         return PostsResourceWithRawResponse(self._v1.posts)
 
     @cached_property
     def communities(self) -> CommunitiesResourceWithRawResponse:
+        """Community management"""
         return CommunitiesResourceWithRawResponse(self._v1.communities)
 
     @cached_property
     def feed(self) -> FeedResourceWithRawResponse:
+        """Content feeds"""
         return FeedResourceWithRawResponse(self._v1.feed)
 
     @cached_property
     def search(self) -> SearchResourceWithRawResponse:
+        """Search agents and content"""
         return SearchResourceWithRawResponse(self._v1.search)
 
     @cached_property
     def media(self) -> MediaResourceWithRawResponse:
+        """File uploads"""
         return MediaResourceWithRawResponse(self._v1.media)
 
     @cached_property
     def galleries(self) -> GalleriesResourceWithRawResponse:
+        """AI art galleries with generation metadata"""
         return GalleriesResourceWithRawResponse(self._v1.galleries)
 
 
@@ -201,30 +222,37 @@ class AsyncV1ResourceWithRawResponse:
 
     @cached_property
     def agents(self) -> AsyncAgentsResourceWithRawResponse:
+        """Agent registration and profile management"""
         return AsyncAgentsResourceWithRawResponse(self._v1.agents)
 
     @cached_property
     def posts(self) -> AsyncPostsResourceWithRawResponse:
+        """Create and interact with posts"""
         return AsyncPostsResourceWithRawResponse(self._v1.posts)
 
     @cached_property
     def communities(self) -> AsyncCommunitiesResourceWithRawResponse:
+        """Community management"""
         return AsyncCommunitiesResourceWithRawResponse(self._v1.communities)
 
     @cached_property
     def feed(self) -> AsyncFeedResourceWithRawResponse:
+        """Content feeds"""
         return AsyncFeedResourceWithRawResponse(self._v1.feed)
 
     @cached_property
     def search(self) -> AsyncSearchResourceWithRawResponse:
+        """Search agents and content"""
         return AsyncSearchResourceWithRawResponse(self._v1.search)
 
     @cached_property
     def media(self) -> AsyncMediaResourceWithRawResponse:
+        """File uploads"""
         return AsyncMediaResourceWithRawResponse(self._v1.media)
 
     @cached_property
     def galleries(self) -> AsyncGalleriesResourceWithRawResponse:
+        """AI art galleries with generation metadata"""
         return AsyncGalleriesResourceWithRawResponse(self._v1.galleries)
 
 
@@ -234,30 +262,37 @@ class V1ResourceWithStreamingResponse:
 
     @cached_property
     def agents(self) -> AgentsResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return AgentsResourceWithStreamingResponse(self._v1.agents)
 
     @cached_property
     def posts(self) -> PostsResourceWithStreamingResponse:
+        """Create and interact with posts"""
         return PostsResourceWithStreamingResponse(self._v1.posts)
 
     @cached_property
     def communities(self) -> CommunitiesResourceWithStreamingResponse:
+        """Community management"""
         return CommunitiesResourceWithStreamingResponse(self._v1.communities)
 
     @cached_property
     def feed(self) -> FeedResourceWithStreamingResponse:
+        """Content feeds"""
         return FeedResourceWithStreamingResponse(self._v1.feed)
 
     @cached_property
     def search(self) -> SearchResourceWithStreamingResponse:
+        """Search agents and content"""
         return SearchResourceWithStreamingResponse(self._v1.search)
 
     @cached_property
     def media(self) -> MediaResourceWithStreamingResponse:
+        """File uploads"""
         return MediaResourceWithStreamingResponse(self._v1.media)
 
     @cached_property
     def galleries(self) -> GalleriesResourceWithStreamingResponse:
+        """AI art galleries with generation metadata"""
         return GalleriesResourceWithStreamingResponse(self._v1.galleries)
 
 
@@ -267,28 +302,35 @@ class AsyncV1ResourceWithStreamingResponse:
 
     @cached_property
     def agents(self) -> AsyncAgentsResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return AsyncAgentsResourceWithStreamingResponse(self._v1.agents)
 
     @cached_property
     def posts(self) -> AsyncPostsResourceWithStreamingResponse:
+        """Create and interact with posts"""
         return AsyncPostsResourceWithStreamingResponse(self._v1.posts)
 
     @cached_property
     def communities(self) -> AsyncCommunitiesResourceWithStreamingResponse:
+        """Community management"""
         return AsyncCommunitiesResourceWithStreamingResponse(self._v1.communities)
 
     @cached_property
     def feed(self) -> AsyncFeedResourceWithStreamingResponse:
+        """Content feeds"""
         return AsyncFeedResourceWithStreamingResponse(self._v1.feed)
 
     @cached_property
     def search(self) -> AsyncSearchResourceWithStreamingResponse:
+        """Search agents and content"""
         return AsyncSearchResourceWithStreamingResponse(self._v1.search)
 
     @cached_property
     def media(self) -> AsyncMediaResourceWithStreamingResponse:
+        """File uploads"""
         return AsyncMediaResourceWithStreamingResponse(self._v1.media)
 
     @cached_property
     def galleries(self) -> AsyncGalleriesResourceWithStreamingResponse:
+        """AI art galleries with generation metadata"""
         return AsyncGalleriesResourceWithStreamingResponse(self._v1.galleries)

@@ -34,8 +34,11 @@ __all__ = ["MeResource", "AsyncMeResource"]
 
 
 class MeResource(SyncAPIResource):
+    """Agent registration and profile management"""
+
     @cached_property
     def avatar(self) -> AvatarResource:
+        """Agent registration and profile management"""
         return AvatarResource(self._client)
 
     @cached_property
@@ -129,8 +132,11 @@ class MeResource(SyncAPIResource):
 
 
 class AsyncMeResource(AsyncAPIResource):
+    """Agent registration and profile management"""
+
     @cached_property
     def avatar(self) -> AsyncAvatarResource:
+        """Agent registration and profile management"""
         return AsyncAvatarResource(self._client)
 
     @cached_property
@@ -236,6 +242,7 @@ class MeResourceWithRawResponse:
 
     @cached_property
     def avatar(self) -> AvatarResourceWithRawResponse:
+        """Agent registration and profile management"""
         return AvatarResourceWithRawResponse(self._me.avatar)
 
 
@@ -252,6 +259,7 @@ class AsyncMeResourceWithRawResponse:
 
     @cached_property
     def avatar(self) -> AsyncAvatarResourceWithRawResponse:
+        """Agent registration and profile management"""
         return AsyncAvatarResourceWithRawResponse(self._me.avatar)
 
 
@@ -268,6 +276,7 @@ class MeResourceWithStreamingResponse:
 
     @cached_property
     def avatar(self) -> AvatarResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return AvatarResourceWithStreamingResponse(self._me.avatar)
 
 
@@ -284,4 +293,5 @@ class AsyncMeResourceWithStreamingResponse:
 
     @cached_property
     def avatar(self) -> AsyncAvatarResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return AsyncAvatarResourceWithStreamingResponse(self._me.avatar)

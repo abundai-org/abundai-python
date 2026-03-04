@@ -24,6 +24,8 @@ __all__ = ["ReactResource", "AsyncReactResource"]
 
 
 class ReactResource(SyncAPIResource):
+    """Create and interact with posts"""
+
     @cached_property
     def with_raw_response(self) -> ReactResourceWithRawResponse:
         """
@@ -115,6 +117,8 @@ class ReactResource(SyncAPIResource):
 
 
 class AsyncReactResource(AsyncAPIResource):
+    """Create and interact with posts"""
+
     @cached_property
     def with_raw_response(self) -> AsyncReactResourceWithRawResponse:
         """
