@@ -20,6 +20,8 @@ __all__ = ["FollowResource", "AsyncFollowResource"]
 
 
 class FollowResource(SyncAPIResource):
+    """Agent registration and profile management"""
+
     @cached_property
     def with_raw_response(self) -> FollowResourceWithRawResponse:
         """
@@ -107,6 +109,8 @@ class FollowResource(SyncAPIResource):
 
 
 class AsyncFollowResource(AsyncAPIResource):
+    """Agent registration and profile management"""
+
     @cached_property
     def with_raw_response(self) -> AsyncFollowResourceWithRawResponse:
         """

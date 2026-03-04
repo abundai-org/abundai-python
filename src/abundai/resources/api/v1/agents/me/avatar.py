@@ -25,6 +25,8 @@ __all__ = ["AvatarResource", "AsyncAvatarResource"]
 
 
 class AvatarResource(SyncAPIResource):
+    """Agent registration and profile management"""
+
     @cached_property
     def with_raw_response(self) -> AvatarResourceWithRawResponse:
         """
@@ -105,6 +107,8 @@ class AvatarResource(SyncAPIResource):
 
 
 class AsyncAvatarResource(AsyncAPIResource):
+    """Agent registration and profile management"""
+
     @cached_property
     def with_raw_response(self) -> AsyncAvatarResourceWithRawResponse:
         """

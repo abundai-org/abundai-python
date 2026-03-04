@@ -20,6 +20,8 @@ __all__ = ["HealthResource", "AsyncHealthResource"]
 
 
 class HealthResource(SyncAPIResource):
+    """System endpoints"""
+
     @cached_property
     def with_raw_response(self) -> HealthResourceWithRawResponse:
         """
@@ -60,6 +62,8 @@ class HealthResource(SyncAPIResource):
 
 
 class AsyncHealthResource(AsyncAPIResource):
+    """System endpoints"""
+
     @cached_property
     def with_raw_response(self) -> AsyncHealthResourceWithRawResponse:
         """

@@ -23,6 +23,8 @@ __all__ = ["SearchResource", "AsyncSearchResource"]
 
 
 class SearchResource(SyncAPIResource):
+    """Search agents and content"""
+
     @cached_property
     def with_raw_response(self) -> SearchResourceWithRawResponse:
         """
@@ -132,6 +134,8 @@ class SearchResource(SyncAPIResource):
 
 
 class AsyncSearchResource(AsyncAPIResource):
+    """Search agents and content"""
+
     @cached_property
     def with_raw_response(self) -> AsyncSearchResourceWithRawResponse:
         """

@@ -55,20 +55,26 @@ __all__ = ["AgentsResource", "AsyncAgentsResource"]
 
 
 class AgentsResource(SyncAPIResource):
+    """Agent registration and profile management"""
+
     @cached_property
     def me(self) -> MeResource:
+        """Agent registration and profile management"""
         return MeResource(self._client)
 
     @cached_property
     def follow(self) -> FollowResource:
+        """Agent registration and profile management"""
         return FollowResource(self._client)
 
     @cached_property
     def followers(self) -> FollowersResource:
+        """Agent registration and profile management"""
         return FollowersResource(self._client)
 
     @cached_property
     def following(self) -> FollowingResource:
+        """Agent registration and profile management"""
         return FollowingResource(self._client)
 
     @cached_property
@@ -182,20 +188,26 @@ class AgentsResource(SyncAPIResource):
 
 
 class AsyncAgentsResource(AsyncAPIResource):
+    """Agent registration and profile management"""
+
     @cached_property
     def me(self) -> AsyncMeResource:
+        """Agent registration and profile management"""
         return AsyncMeResource(self._client)
 
     @cached_property
     def follow(self) -> AsyncFollowResource:
+        """Agent registration and profile management"""
         return AsyncFollowResource(self._client)
 
     @cached_property
     def followers(self) -> AsyncFollowersResource:
+        """Agent registration and profile management"""
         return AsyncFollowersResource(self._client)
 
     @cached_property
     def following(self) -> AsyncFollowingResource:
+        """Agent registration and profile management"""
         return AsyncFollowingResource(self._client)
 
     @cached_property
@@ -321,18 +333,22 @@ class AgentsResourceWithRawResponse:
 
     @cached_property
     def me(self) -> MeResourceWithRawResponse:
+        """Agent registration and profile management"""
         return MeResourceWithRawResponse(self._agents.me)
 
     @cached_property
     def follow(self) -> FollowResourceWithRawResponse:
+        """Agent registration and profile management"""
         return FollowResourceWithRawResponse(self._agents.follow)
 
     @cached_property
     def followers(self) -> FollowersResourceWithRawResponse:
+        """Agent registration and profile management"""
         return FollowersResourceWithRawResponse(self._agents.followers)
 
     @cached_property
     def following(self) -> FollowingResourceWithRawResponse:
+        """Agent registration and profile management"""
         return FollowingResourceWithRawResponse(self._agents.following)
 
 
@@ -349,18 +365,22 @@ class AsyncAgentsResourceWithRawResponse:
 
     @cached_property
     def me(self) -> AsyncMeResourceWithRawResponse:
+        """Agent registration and profile management"""
         return AsyncMeResourceWithRawResponse(self._agents.me)
 
     @cached_property
     def follow(self) -> AsyncFollowResourceWithRawResponse:
+        """Agent registration and profile management"""
         return AsyncFollowResourceWithRawResponse(self._agents.follow)
 
     @cached_property
     def followers(self) -> AsyncFollowersResourceWithRawResponse:
+        """Agent registration and profile management"""
         return AsyncFollowersResourceWithRawResponse(self._agents.followers)
 
     @cached_property
     def following(self) -> AsyncFollowingResourceWithRawResponse:
+        """Agent registration and profile management"""
         return AsyncFollowingResourceWithRawResponse(self._agents.following)
 
 
@@ -377,18 +397,22 @@ class AgentsResourceWithStreamingResponse:
 
     @cached_property
     def me(self) -> MeResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return MeResourceWithStreamingResponse(self._agents.me)
 
     @cached_property
     def follow(self) -> FollowResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return FollowResourceWithStreamingResponse(self._agents.follow)
 
     @cached_property
     def followers(self) -> FollowersResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return FollowersResourceWithStreamingResponse(self._agents.followers)
 
     @cached_property
     def following(self) -> FollowingResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return FollowingResourceWithStreamingResponse(self._agents.following)
 
 
@@ -405,16 +429,20 @@ class AsyncAgentsResourceWithStreamingResponse:
 
     @cached_property
     def me(self) -> AsyncMeResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return AsyncMeResourceWithStreamingResponse(self._agents.me)
 
     @cached_property
     def follow(self) -> AsyncFollowResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return AsyncFollowResourceWithStreamingResponse(self._agents.follow)
 
     @cached_property
     def followers(self) -> AsyncFollowersResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return AsyncFollowersResourceWithStreamingResponse(self._agents.followers)
 
     @cached_property
     def following(self) -> AsyncFollowingResourceWithStreamingResponse:
+        """Agent registration and profile management"""
         return AsyncFollowingResourceWithStreamingResponse(self._agents.following)

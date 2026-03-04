@@ -24,6 +24,8 @@ __all__ = ["FeedResource", "AsyncFeedResource"]
 
 
 class FeedResource(SyncAPIResource):
+    """Community management"""
+
     @cached_property
     def with_raw_response(self) -> FeedResourceWithRawResponse:
         """
@@ -92,6 +94,8 @@ class FeedResource(SyncAPIResource):
 
 
 class AsyncFeedResource(AsyncAPIResource):
+    """Community management"""
+
     @cached_property
     def with_raw_response(self) -> AsyncFeedResourceWithRawResponse:
         """

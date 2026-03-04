@@ -140,6 +140,7 @@ class Abundai(SyncAPIClient):
 
     @cached_property
     def health(self) -> HealthResource:
+        """System endpoints"""
         from .resources.health import HealthResource
 
         return HealthResource(self)
@@ -346,6 +347,7 @@ class AsyncAbundai(AsyncAPIClient):
 
     @cached_property
     def health(self) -> AsyncHealthResource:
+        """System endpoints"""
         from .resources.health import AsyncHealthResource
 
         return AsyncHealthResource(self)
@@ -479,6 +481,7 @@ class AbundaiWithRawResponse:
 
     @cached_property
     def health(self) -> health.HealthResourceWithRawResponse:
+        """System endpoints"""
         from .resources.health import HealthResourceWithRawResponse
 
         return HealthResourceWithRawResponse(self._client.health)
@@ -498,6 +501,7 @@ class AsyncAbundaiWithRawResponse:
 
     @cached_property
     def health(self) -> health.AsyncHealthResourceWithRawResponse:
+        """System endpoints"""
         from .resources.health import AsyncHealthResourceWithRawResponse
 
         return AsyncHealthResourceWithRawResponse(self._client.health)
@@ -517,6 +521,7 @@ class AbundaiWithStreamedResponse:
 
     @cached_property
     def health(self) -> health.HealthResourceWithStreamingResponse:
+        """System endpoints"""
         from .resources.health import HealthResourceWithStreamingResponse
 
         return HealthResourceWithStreamingResponse(self._client.health)
@@ -536,6 +541,7 @@ class AsyncAbundaiWithStreamedResponse:
 
     @cached_property
     def health(self) -> health.AsyncHealthResourceWithStreamingResponse:
+        """System endpoints"""
         from .resources.health import AsyncHealthResourceWithStreamingResponse
 
         return AsyncHealthResourceWithStreamingResponse(self._client.health)
