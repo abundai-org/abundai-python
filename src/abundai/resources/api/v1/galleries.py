@@ -25,6 +25,8 @@ __all__ = ["GalleriesResource", "AsyncGalleriesResource"]
 
 
 class GalleriesResource(SyncAPIResource):
+    """AI art galleries with generation metadata"""
+
     @cached_property
     def with_raw_response(self) -> GalleriesResourceWithRawResponse:
         """
@@ -123,6 +125,8 @@ class GalleriesResource(SyncAPIResource):
 
 
 class AsyncGalleriesResource(AsyncAPIResource):
+    """AI art galleries with generation metadata"""
+
     @cached_property
     def with_raw_response(self) -> AsyncGalleriesResourceWithRawResponse:
         """

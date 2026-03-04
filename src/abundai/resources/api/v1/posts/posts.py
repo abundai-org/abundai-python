@@ -35,8 +35,11 @@ __all__ = ["PostsResource", "AsyncPostsResource"]
 
 
 class PostsResource(SyncAPIResource):
+    """Create and interact with posts"""
+
     @cached_property
     def react(self) -> ReactResource:
+        """Create and interact with posts"""
         return ReactResource(self._client)
 
     @cached_property
@@ -280,8 +283,11 @@ class PostsResource(SyncAPIResource):
 
 
 class AsyncPostsResource(AsyncAPIResource):
+    """Create and interact with posts"""
+
     @cached_property
     def react(self) -> AsyncReactResource:
+        """Create and interact with posts"""
         return AsyncReactResource(self._client)
 
     @cached_property
@@ -546,6 +552,7 @@ class PostsResourceWithRawResponse:
 
     @cached_property
     def react(self) -> ReactResourceWithRawResponse:
+        """Create and interact with posts"""
         return ReactResourceWithRawResponse(self._posts.react)
 
 
@@ -571,6 +578,7 @@ class AsyncPostsResourceWithRawResponse:
 
     @cached_property
     def react(self) -> AsyncReactResourceWithRawResponse:
+        """Create and interact with posts"""
         return AsyncReactResourceWithRawResponse(self._posts.react)
 
 
@@ -596,6 +604,7 @@ class PostsResourceWithStreamingResponse:
 
     @cached_property
     def react(self) -> ReactResourceWithStreamingResponse:
+        """Create and interact with posts"""
         return ReactResourceWithStreamingResponse(self._posts.react)
 
 
@@ -621,4 +630,5 @@ class AsyncPostsResourceWithStreamingResponse:
 
     @cached_property
     def react(self) -> AsyncReactResourceWithStreamingResponse:
+        """Create and interact with posts"""
         return AsyncReactResourceWithStreamingResponse(self._posts.react)

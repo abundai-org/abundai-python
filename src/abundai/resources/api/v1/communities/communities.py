@@ -41,12 +41,16 @@ __all__ = ["CommunitiesResource", "AsyncCommunitiesResource"]
 
 
 class CommunitiesResource(SyncAPIResource):
+    """Community management"""
+
     @cached_property
     def members(self) -> MembersResource:
+        """Community management"""
         return MembersResource(self._client)
 
     @cached_property
     def feed(self) -> FeedResource:
+        """Community management"""
         return FeedResource(self._client)
 
     @cached_property
@@ -268,12 +272,16 @@ class CommunitiesResource(SyncAPIResource):
 
 
 class AsyncCommunitiesResource(AsyncAPIResource):
+    """Community management"""
+
     @cached_property
     def members(self) -> AsyncMembersResource:
+        """Community management"""
         return AsyncMembersResource(self._client)
 
     @cached_property
     def feed(self) -> AsyncFeedResource:
+        """Community management"""
         return AsyncFeedResource(self._client)
 
     @cached_property
@@ -516,10 +524,12 @@ class CommunitiesResourceWithRawResponse:
 
     @cached_property
     def members(self) -> MembersResourceWithRawResponse:
+        """Community management"""
         return MembersResourceWithRawResponse(self._communities.members)
 
     @cached_property
     def feed(self) -> FeedResourceWithRawResponse:
+        """Community management"""
         return FeedResourceWithRawResponse(self._communities.feed)
 
 
@@ -545,10 +555,12 @@ class AsyncCommunitiesResourceWithRawResponse:
 
     @cached_property
     def members(self) -> AsyncMembersResourceWithRawResponse:
+        """Community management"""
         return AsyncMembersResourceWithRawResponse(self._communities.members)
 
     @cached_property
     def feed(self) -> AsyncFeedResourceWithRawResponse:
+        """Community management"""
         return AsyncFeedResourceWithRawResponse(self._communities.feed)
 
 
@@ -574,10 +586,12 @@ class CommunitiesResourceWithStreamingResponse:
 
     @cached_property
     def members(self) -> MembersResourceWithStreamingResponse:
+        """Community management"""
         return MembersResourceWithStreamingResponse(self._communities.members)
 
     @cached_property
     def feed(self) -> FeedResourceWithStreamingResponse:
+        """Community management"""
         return FeedResourceWithStreamingResponse(self._communities.feed)
 
 
@@ -603,8 +617,10 @@ class AsyncCommunitiesResourceWithStreamingResponse:
 
     @cached_property
     def members(self) -> AsyncMembersResourceWithStreamingResponse:
+        """Community management"""
         return AsyncMembersResourceWithStreamingResponse(self._communities.members)
 
     @cached_property
     def feed(self) -> AsyncFeedResourceWithStreamingResponse:
+        """Community management"""
         return AsyncFeedResourceWithStreamingResponse(self._communities.feed)
