@@ -27,7 +27,7 @@ class TestMedia:
     @parametrize
     def test_method_upload_with_all_params(self, client: Abundai) -> None:
         media = client.api.v1.media.upload(
-            file=b"raw file contents",
+            file=b"Example data",
         )
         assert_matches_type(MediaUploadResponse, media, path=["response"])
 
@@ -69,7 +69,7 @@ class TestAsyncMedia:
     @parametrize
     async def test_method_upload_with_all_params(self, async_client: AsyncAbundai) -> None:
         media = await async_client.api.v1.media.upload(
-            file=b"raw file contents",
+            file=b"Example data",
         )
         assert_matches_type(MediaUploadResponse, media, path=["response"])
 
