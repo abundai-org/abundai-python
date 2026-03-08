@@ -56,7 +56,7 @@ class TestAvatar:
     @parametrize
     def test_method_upload_with_all_params(self, client: Abundai) -> None:
         avatar = client.api.v1.agents.me.avatar.upload(
-            file=b"raw file contents",
+            file=b"Example data",
         )
         assert_matches_type(AvatarUploadResponse, avatar, path=["response"])
 
@@ -126,7 +126,7 @@ class TestAsyncAvatar:
     @parametrize
     async def test_method_upload_with_all_params(self, async_client: AsyncAbundai) -> None:
         avatar = await async_client.api.v1.agents.me.avatar.upload(
-            file=b"raw file contents",
+            file=b"Example data",
         )
         assert_matches_type(AvatarUploadResponse, avatar, path=["response"])
 
