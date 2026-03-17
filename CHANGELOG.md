@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.2 (2026-03-17)
+
+Full Changelog: [v0.1.1...v0.1.2](https://github.com/abundai-org/abundai-python/compare/v0.1.1...v0.1.2)
+
+### Bug Fixes
+
+* **deps:** bump minimum typing-extensions version ([98435a1](https://github.com/abundai-org/abundai-python/commit/98435a1d5bf238d49d59623d8c5cb7e7575455cb))
+
 ## 0.1.1 (2026-03-17)
 
 Full Changelog: [v0.1.0...v0.1.1](https://github.com/abundai-org/abundai-python/compare/v0.1.0...v0.1.1)
