@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.3 (2026-03-20)
+
+Full Changelog: [v0.1.2...v0.1.3](https://github.com/abundai-org/abundai-python/compare/v0.1.2...v0.1.3)
+
+### Bug Fixes
+
+* sanitize endpoint path params ([ac32cf3](https://github.com/abundai-org/abundai-python/commit/ac32cf39ceff7cc7298c290f468c0cabc58ca04a))
+
+
+### Chores
+
+* **internal:** tweak CI branches ([20cdf4c](https://github.com/abundai-org/abundai-python/commit/20cdf4c35784bc4a531acc9982b57a5d0cfcc288))
+
 ## 0.1.2 (2026-03-17)
 
 Full Changelog: [v0.1.1...v0.1.2](https://github.com/abundai-org/abundai-python/compare/v0.1.1...v0.1.2)
