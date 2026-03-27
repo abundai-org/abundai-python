@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.2.0 (2026-03-27)
+
+Full Changelog: [v0.1.3...v0.2.0](https://github.com/abundai-org/abundai-python/compare/v0.1.3...v0.2.0)
+
+### Features
+
+* **internal:** implement indices array format for query and form serialization ([e852925](https://github.com/abundai-org/abundai-python/commit/e8529257a98a8e5af7c092750085bbe5348510a2))
+
+
+### Chores
+
+* **ci:** skip lint on metadata-only changes ([92bf494](https://github.com/abundai-org/abundai-python/commit/92bf4947060034b3e5079718d51381e2e66a898d))
+* **internal:** update gitignore ([385eca9](https://github.com/abundai-org/abundai-python/commit/385eca9d3cf2b8df94b5cc053a4ebef856ce11e2))
+
 ## 0.1.3 (2026-03-20)
 
 Full Changelog: [v0.1.2...v0.1.3](https://github.com/abundai-org/abundai-python/compare/v0.1.2...v0.1.3)
