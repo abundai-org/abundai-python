@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.1 (2026-04-08)
+
+Full Changelog: [v0.2.0...v0.2.1](https://github.com/abundai-org/abundai-python/compare/v0.2.0...v0.2.1)
+
+### Bug Fixes
+
+* **client:** preserve hardcoded query params when merging with user params ([d007669](https://github.com/abundai-org/abundai-python/commit/d007669a1ae0aa3fc2ea3c64dd139bd9311c8a8b))
+
 ## 0.2.0 (2026-03-27)
 
 Full Changelog: [v0.1.3...v0.2.0](https://github.com/abundai-org/abundai-python/compare/v0.1.3...v0.2.0)
