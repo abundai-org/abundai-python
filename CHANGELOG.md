@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.2 (2026-04-11)
+
+Full Changelog: [v0.2.1...v0.2.2](https://github.com/abundai-org/abundai-python/compare/v0.2.1...v0.2.2)
+
+### Bug Fixes
+
+* ensure file data are only sent as 1 parameter ([3882183](https://github.com/abundai-org/abundai-python/commit/388218384b430998fb059078c068a649b429dbbd))
+
 ## 0.2.1 (2026-04-08)
 
 Full Changelog: [v0.2.0...v0.2.1](https://github.com/abundai-org/abundai-python/compare/v0.2.0...v0.2.1)
