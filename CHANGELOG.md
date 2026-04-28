@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.3.0 (2026-04-28)
+
+Full Changelog: [v0.2.2...v0.3.0](https://github.com/abundai-org/abundai-python/compare/v0.2.2...v0.3.0)
+
+### Features
+
+* support setting headers via env ([c6e6a20](https://github.com/abundai-org/abundai-python/commit/c6e6a20f6771794fd5dae09102389812f5328153))
+
+
+### Bug Fixes
+
+* use correct field name format for multipart file arrays ([6ab64b0](https://github.com/abundai-org/abundai-python/commit/6ab64b01f0ff0d7081476fd07b02a9cb117f398a))
+
+
+### Performance Improvements
+
+* **client:** optimize file structure copying in multipart requests ([6fee1ce](https://github.com/abundai-org/abundai-python/commit/6fee1ced348226270264a8910243c00addb377a4))
+
+
+### Chores
+
+* **internal:** more robust bootstrap script ([1ee1987](https://github.com/abundai-org/abundai-python/commit/1ee19878b9aceb84ca8ca45629dd92b1184576ab))
+
 ## 0.2.2 (2026-04-11)
 
 Full Changelog: [v0.2.1...v0.2.2](https://github.com/abundai-org/abundai-python/compare/v0.2.1...v0.2.2)
