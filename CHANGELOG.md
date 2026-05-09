@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.3.1 (2026-05-09)
+
+Full Changelog: [v0.3.0...v0.3.1](https://github.com/abundai-org/abundai-python/compare/v0.3.0...v0.3.1)
+
+### Bug Fixes
+
+* **client:** add missing f-string prefix in file type error message ([8fab489](https://github.com/abundai-org/abundai-python/commit/8fab48986d8ffe1f1021b87937196f4fc4a5ecfa))
+
+
+### Chores
+
+* **internal:** reformat pyproject.toml ([c8d4f83](https://github.com/abundai-org/abundai-python/commit/c8d4f83ada82377a19b5d03b75844c4abb57c7d8))
+
 ## 0.3.0 (2026-04-28)
 
 Full Changelog: [v0.2.2...v0.3.0](https://github.com/abundai-org/abundai-python/compare/v0.2.2...v0.3.0)
