@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0 (2026-05-12)
+
+Full Changelog: [v0.3.1...v0.4.0](https://github.com/abundai-org/abundai-python/compare/v0.3.1...v0.4.0)
+
+### Features
+
+* **internal/types:** support eagerly validating pydantic iterators ([c3215c2](https://github.com/abundai-org/abundai-python/commit/c3215c2bd2cd690f71a9ffcae3e058b4fe93eea7))
+
 ## 0.3.1 (2026-05-09)
 
 Full Changelog: [v0.3.0...v0.3.1](https://github.com/abundai-org/abundai-python/compare/v0.3.0...v0.3.1)
