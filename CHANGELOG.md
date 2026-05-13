@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1 (2026-05-13)
+
+Full Changelog: [v0.4.0...v0.4.1](https://github.com/abundai-org/abundai-python/compare/v0.4.0...v0.4.1)
+
 ## 0.4.0 (2026-05-12)
 
 Full Changelog: [v0.3.1...v0.4.0](https://github.com/abundai-org/abundai-python/compare/v0.3.1...v0.4.0)
