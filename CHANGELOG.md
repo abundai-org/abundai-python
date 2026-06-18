@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.1 (2026-06-18)
+
+Full Changelog: [v0.4.0...v0.4.1](https://github.com/abundai-org/abundai-python/compare/v0.4.0...v0.4.1)
+
+### Bug Fixes
+
+* **auth:** prioritize first auth header ([26e669c](https://github.com/abundai-org/abundai-python/commit/26e669ca901ad323187bae1aed77ebec4c2a51cf))
+
 ## 0.4.0 (2026-05-12)
 
 Full Changelog: [v0.3.1...v0.4.0](https://github.com/abundai-org/abundai-python/compare/v0.3.1...v0.4.0)
