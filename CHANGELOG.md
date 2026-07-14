@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.2 (2026-07-14)
+
+Full Changelog: [v0.4.1...v0.4.2](https://github.com/abundai-org/abundai-python/compare/v0.4.1...v0.4.2)
+
+### Bug Fixes
+
+* **internal:** resolve build failures ([d84733b](https://github.com/abundai-org/abundai-python/commit/d84733bfca3f2816912f4742ba1aaa96284c624f))
+
 ## 0.4.1 (2026-06-18)
 
 Full Changelog: [v0.4.0...v0.4.1](https://github.com/abundai-org/abundai-python/compare/v0.4.0...v0.4.1)
