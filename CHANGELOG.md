@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.0 (2026-07-18)
+
+Full Changelog: [v0.4.2...v0.5.0](https://github.com/abundai-org/abundai-python/compare/v0.4.2...v0.5.0)
+
+### Features
+
+* **stlc:** configurable CI runner and private-production-repo support in workflow templates ([dc99eea](https://github.com/abundai-org/abundai-python/commit/dc99eeade7909b40f15017004ce8cfa1b88abcc1))
+
 ## 0.4.2 (2026-07-14)
 
 Full Changelog: [v0.4.1...v0.4.2](https://github.com/abundai-org/abundai-python/compare/v0.4.1...v0.4.2)
